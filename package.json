@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/Marvinh5/vigilant-spork#readme",
   "dependencies": {
-    "node-cache": "^5.1.2",
     "node-vault": "^0.9.22",
     "typescript": "^4.5.4"
   },

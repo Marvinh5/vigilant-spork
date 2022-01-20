@@ -9,13 +9,13 @@ export interface EnvOptions {
   loadIntoEnv?: boolean;
 }
 
-function loadIntoEnv(data:any, options:EnvOptions) {
-	if (data && options.loadIntoEnv) {
-		process.env = Object.entries(data).reduce((prev, [key, value]) => {
-			prev[String(key).toUpperCase()] = String(value);
-			return prev;
-		}, process.env);
-	}
+function loadIntoEnv(data: any, options: EnvOptions) {
+  if (data && options.loadIntoEnv) {
+    process.env = Object.entries(data).reduce((prev, [key, value]) => {
+      prev[String(key).toUpperCase()] = String(value);
+      return prev;
+    }, process.env);
+  }
 }
 
 /**
@@ -29,14 +29,16 @@ export async function loadVaultEnv(
   try {
     const endpoint = options.vaultHost || process.env.VAULT_HOST;
     const vault = Vault({
-			apiVersion: "v1",
-			endpoint
-		});
-		
-		let path = `${options.secretEngine}/data`;
+      apiVersion: "v1",
+      endpoint,
+    });
 
-    if (options.nodeEnv != null) path += `/${options.nodeEnv}`;
-		path += `/${options.key}`;
+    let path = `${options.secretEngine}/data`;
+
+    if (options.nodeEnv != null) {
+      path += `/${options.nodeEnv}`;
+    }
+    path += `/${options.key}`;
 
     await vault.githubLogin({
       token: options.authToken,
@@ -47,11 +49,10 @@ export async function loadVaultEnv(
 
     const data: Record<string, string | boolean | number> = val?.data?.data;
 
-		loadIntoEnv(data, options);
+    loadIntoEnv(data, options);
 
     return data;
-  
-	} catch (err) {
+  } catch (err) {
     throw err;
   }
 }
