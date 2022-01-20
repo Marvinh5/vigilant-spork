@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build:watch": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --watch",
     "test": "echo \"no tests yet\""
   },
   "repository": {
@@ -18,6 +22,8 @@
   },
   "homepage": "https://github.com/Marvinh5/vigilant-spork#readme",
   "dependencies": {
+    "node-cache": "^5.1.2",
+    "node-vault": "^0.9.22",
     "typescript": "^4.5.4"
   },
   "devDependencies": {
