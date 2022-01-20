@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no tests yet\""
   },
   "repository": {
     "type": "git",
