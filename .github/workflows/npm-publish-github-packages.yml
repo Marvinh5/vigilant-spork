@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org
+          branch: master
       - run: npm ci
       - run: npm run build
       - run: npm publish
