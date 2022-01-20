@@ -1,0 +1,29 @@
+{
+  "name": "vigilant-spork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marvinh5/vigilant-spork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marvinh5/vigilant-spork/issues"
+  },
+  "homepage": "https://github.com/Marvinh5/vigilant-spork#readme",
+  "dependencies": {
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.64.0",
+    "rollup-plugin-dts": "^4.1.0"
+  },
+  "types": "dist/types"
+}
