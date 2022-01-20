@@ -23,8 +23,11 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.0",
     "rollup": "^2.64.0",
-    "rollup-plugin-dts": "^4.1.0"
+    "rollup-plugin-dts": "^4.1.0",
+    "tslib": "^2.3.1"
   },
   "types": "dist/types",
-  "files": ["dist/"]
+  "files": [
+    "dist/"
+  ]
 }
