@@ -25,5 +25,6 @@
     "rollup": "^2.64.0",
     "rollup-plugin-dts": "^4.1.0"
   },
-  "types": "dist/types"
+  "types": "dist/types",
+  "files": ["dist/"]
 }
