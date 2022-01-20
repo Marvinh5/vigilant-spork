@@ -1,4 +1,4 @@
-import { marvin } from "./other_things/marivn"
+import { marvin } from "./other_things/marvin"
 
 export interface ChamberInterface {
 	niceNumber: number
