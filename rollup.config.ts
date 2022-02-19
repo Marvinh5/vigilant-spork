@@ -18,7 +18,7 @@ export default defineConfig([
     plugins: [typescriptPlugin(), dts()],
     output: [
       {
-        file: "dist/types/bundle.d.ts",
+        file: "dist/bundle.d.ts",
         format: "es",
       },
     ],
